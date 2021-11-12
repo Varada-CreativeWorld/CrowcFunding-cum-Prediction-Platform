@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import './App.css'
+//import Grid  from './Grid';
+import Home from './Home';
+//import './App.css'
 // import Signup from './Signup'
 // import {AuthProvider} from "../contexts/AuthContext"
 // import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
@@ -9,18 +11,21 @@ import './App.css'
 // import ForgotPassword from "./ForgotPassword"
 // import BlockChain from './BlockChain'
 // import {Link} from 'react-router-dom'
-import Home from './Home'
-import Footer from './Footer'
+// import Home from './Home'
+// import Footer from './Footer'
+// import RainfallPred from './RainfallPred';
 
 class App extends Component {
+
+  
 
   render() {
     
     return (
-      <div>            
-            <Home>
-            </Home>
-            <Footer></Footer>
+      <> 
+                        
+            <Home></Home>
+            
             {/* <Router>
                   <div class="jumbotron" class="text-center">
                       <h1 class="display-4">De-Fi Funding Application</h1>
@@ -45,7 +50,7 @@ class App extends Component {
                   </AuthProvider> 
             </Router>
              */}
-      </div>
+      </>
     );
   }
 }

@@ -3,17 +3,9 @@ import Web3 from 'web3'
 import DaiToken from '../abis/DaiToken.json'
 import DappToken from '../abis/DappToken.json'
 import TokenFarm from '../abis/TokenFarm.json'
-//import Navbar from './Navbar'
 import Main from './Main'
 import './App.css'
-// import Signup from './Signup'
-// import {AuthProvider} from "../contexts/AuthContext"
-// import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
-// import Dashboard from './Dashboard'
-// import Login from './Login'
-// import PrivateRoute from "./PrivateRoute"
-// import ForgotPassword from "./ForgotPassword"
-// import WelcomePage from "./WelcomePage"
+//import  Navbar  from './Navbar'
 
 class BlockChain extends Component {
 
@@ -112,7 +104,7 @@ class BlockChain extends Component {
   render() {
     let content
     if(this.state.loading) {
-      content = <p id="loader" className="text-center">Loading...</p>
+      content = <p id="loader" className="text-center text-white">Loading...</p>
     } else {
       content = <Main
         daiTokenBalance={this.state.daiTokenBalance}
@@ -128,32 +120,14 @@ class BlockChain extends Component {
         {/* <Navbar account={this.state.account} />
         <br/>
         <br/>
-        <br/>
-        <WelcomePage/> */}
+        <br/> */}
+        {/* <WelcomePage/> */}
         <div className="container-fluid mt-5">
           <div className="row">
             <main role="main" className="col-lg-12 ml-auto mr-auto" style={{ maxWidth: '600px' }}>
               <div className="content mr-auto ml-auto">
-                {/* <a
-                  href="http://www.dappuniversity.com/bootcamp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                </a> */}
-
-                {content}
-                {/* <Router>
-                  <AuthProvider>
-                        <Switch>
-                          <PrivateRoute exact path="/" component={Dashboard}></PrivateRoute>
-                          <Route path="/signup" component={Signup}></Route>
-                          <Route path="/login" component={Login}></Route>
-                          <Route path="/forgotpassword" component={ForgotPassword}></Route>
-                         
-                        </Switch>           
-                  </AuthProvider> 
-                </Router> */}
-                             
+                
+                {content}                
 
               </div>
             </main>

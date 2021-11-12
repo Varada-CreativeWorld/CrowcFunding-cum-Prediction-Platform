@@ -39,8 +39,10 @@ contract TokenFarm{
       
         stakingBalance[msg.sender]=0;
         isStaking[msg.sender]=false;
+        
     }
 
+    
     function issueTokens() public {
 
         require(msg.sender == owner, "caller must be the owner");

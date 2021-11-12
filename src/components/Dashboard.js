@@ -12,6 +12,11 @@ export default function Dashboard(){
     const [error, setError]=useState("")
     const {currentUser, logout} = useAuth()
     const history=useHistory()
+
+    async function display() {
+        console.log(TokenFarm.abi[7].outputs)
+        console.log(TokenFarm)
+    }
     
     async function handlelogout()
     {
@@ -48,7 +53,8 @@ export default function Dashboard(){
                     <h2 className="text-center mb-4">Profile</h2>
                     {error && <Alert variant="danger">{error}</Alert>}
                     <strong>Email:</strong> {currentUser.email}
-                    <Button variant="link" onClick={increaseInvest}>Update</Button>
+                    {/* <Button variant="link" onClick={increaseInvest}>Update</Button> */}
+                    <Button variant="link" onClick={display}>Show</Button>
                     <div className="w-100 text-center mt-2">
                         <Button variant="link" onClick={handlelogout}>Log Out</Button>
                     </div>
